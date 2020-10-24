@@ -45,7 +45,7 @@ export class ComponentPreview {
             }}
             onClick={() => (this.isCodeVisible = !this.isCodeVisible)}
           >
-            Toggle code
+            {this.isCodeVisible ? 'Hide' : 'Show'} code
           </a>
           <div
             class={{
