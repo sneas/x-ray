@@ -1,1 +1,43 @@
 @import '~highlight.js/scss/vs2015';
+
+.component-preview__code-previewer {
+  margin-bottom: 0.5rem;
+}
+
+.component-preview__toggle {
+  cursor: pointer;
+
+  .component-preview__toggle-chevron {
+    text-decoration: none;
+    margin-right: 0.2rem;
+    display: inline-block;
+    transition: transform 0.1s ease-in-out;
+    transform-origin: center center;
+  }
+
+  &.component-preview__toggle--active {
+    .component-preview__toggle-chevron {
+      transform: rotate(90deg);
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.component-preview__code-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.component-preview__code-container--visible {
+  max-height: 1000px;
+  transition: max-height 0.15s ease-in;
+}
+
+.component-preview__code {
+  margin-bottom: 0;
+}
