@@ -7,17 +7,24 @@
 .component-preview__toggle {
   cursor: pointer;
 
-  .component-preview__toggle-chevron {
-    text-decoration: none;
-    margin-right: 0.2rem;
+  &:before {
+    content: ' ';
     display: inline-block;
-    transition: transform 0.1s ease-in-out;
-    transform-origin: center center;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+
+    vertical-align: middle;
+    margin-right: 0.7rem;
+    transform: translateY(-2px);
+
+    transition: transform 0.2s ease-out;
   }
 
   &.component-preview__toggle--active {
-    .component-preview__toggle-chevron {
-      transform: rotate(90deg);
+    &:before {
+      transform: rotate(90deg) translate(-3px, -5px);
     }
   }
 

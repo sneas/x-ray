@@ -45,7 +45,6 @@ export class ComponentPreview {
             }}
             onClick={() => (this.isCodeVisible = !this.isCodeVisible)}
           >
-            <span class="component-preview__toggle-chevron">‣</span>
             Toggle code
           </a>
           <div
