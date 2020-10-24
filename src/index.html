@@ -10,29 +10,36 @@
 
     <script type="module" src="/build/component-preview.esm.js"></script>
     <script nomodule src="/build/component-preview.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/img-comparison-slider@latest/dist/component/component.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/img-comparison-slider@latest/dist/component/component.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/img-comparison-slider@latest/dist/collection/styles/initial.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <component-preview>
-      <script type="text/javascript">
-        console.log('asd');
-        console.log('asd');
-        console.log('dsfdf');
-        console.log('dsfdf');
-        console.log('dsfdf');
-        console.log('dsfdf');
-
-        function soemthing() {
-          console.log('asd');
-        }
-      </script>
-      <style type="text/css">
-        body {
-          color: red;
-        }
-      </style>
-      <my-component first="Stencil" last="'Don't call me a framework' JS">
-        Something
-      </my-component>
-    </component-preview>
+    <div class="container mt-4 mb-4">
+      <div class="row justify-content-md-center">
+        <component-preview>
+          <img-comparison-slider>
+            <img slot="before" style="width: 100%" src="./demo/before.jpg" />
+            <img slot="after" style="width: 100%" src="./demo/after.jpg" />
+          </img-comparison-slider>
+        </component-preview>
+      </div>
+    </div>
   </body>
 </html>
