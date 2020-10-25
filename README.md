@@ -45,4 +45,4 @@ import 'component-preview';
 
 Which provides the below result:
 
-![Preview of Bootstrap 4 Alert Component](docs/bootstra-alert.png)
+![Preview of Bootstrap 4 Alert Component](docs/bootstrap-alert.png)
