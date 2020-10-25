@@ -43,6 +43,6 @@ import 'component-preview';
 </component-preview>
 ```
 
-Which provides the below result:
+Which provides the result below:
 
 ![Preview of Bootstrap 4 Alert Component](docs/bootstrap-alert.png)
