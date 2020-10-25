@@ -34,21 +34,10 @@
     <div class="container mt-4 mb-4">
       <div class="row justify-content-md-center">
         <component-preview>
-          <div
-            class="alert alert-warning alert-dismissible fade show"
-            role="alert"
-          >
-            <strong>Holy guacamole!</strong> You should check in on some of
-            those fields below.
-            <button
-              type="button"
-              class="close"
-              data-dismiss="alert"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
+          <img-comparison-slider>
+            <img slot="before" style="width: 100%" src="./demo/before.jpg" />
+            <img slot="after" style="width: 100%" src="./demo/after.jpg" />
+          </img-comparison-slider>
         </component-preview>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit
