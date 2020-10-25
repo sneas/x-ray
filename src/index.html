@@ -8,8 +8,8 @@
     />
     <title>Stencil Component Starter</title>
 
-    <script type="module" src="/build/component-preview.esm.js"></script>
-    <script nomodule src="/build/component-preview.js"></script>
+    <script type="module" src="/build/component.esm.js"></script>
+    <script nomodule src="/build/component.js"></script>
 
     <script
       type="module"
@@ -34,10 +34,21 @@
     <div class="container mt-4 mb-4">
       <div class="row justify-content-md-center">
         <component-preview>
-          <img-comparison-slider>
-            <img slot="before" style="width: 100%" src="./demo/before.jpg" />
-            <img slot="after" style="width: 100%" src="./demo/after.jpg" />
-          </img-comparison-slider>
+          <div
+            class="alert alert-warning alert-dismissible fade show"
+            role="alert"
+          >
+            <strong>Holy guacamole!</strong> You should check in on some of
+            those fields below.
+            <button
+              type="button"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
         </component-preview>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit

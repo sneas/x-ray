@@ -2,7 +2,7 @@ import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'component-preview',
+  namespace: 'component',
   outputTargets: [
     {
       type: 'dist',
