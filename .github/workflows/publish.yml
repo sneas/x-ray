@@ -1,8 +1,5 @@
-name: Publish Component
-on:
-  push:
-    branches:
-      - main
+name: publish component
+on: push
 jobs:
   build:
     runs-on: macos-latest
@@ -14,7 +11,9 @@ jobs:
         node-version: '14.x'
     - run: npm install
     - run: npm run build
-    - name: Publish Demo
+    - run: npm run release
+    - name: push to gh-pages
+      if: contains(github.ref, 'main')
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
