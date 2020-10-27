@@ -5,8 +5,6 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        persist-credentials: false
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
@@ -18,10 +16,15 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      with:
+        semantic_version: 17
+        extra_plugins: |
+          @semantic-release/git
     - name: push to gh-pages
       if: contains(github.ref, 'main')
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         BRANCH: gh-pages
         FOLDER: www
+
