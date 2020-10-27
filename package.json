@@ -1,6 +1,6 @@
 {
   "name": "component-preview",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "A small web component for demoing other web/HTML components. Displays component and renders it's HTML.",
   "author": "Dmytro Snisarenko",
   "homepage": "https://sneas.github.io/component-preview",
@@ -25,8 +25,7 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate",
-    "release": "semantic-release"
+    "generate": "stencil generate"
   },
   "dependencies": {
     "@stencil/core": "^2.0.1",
@@ -35,15 +34,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@semantic-release/commit-analyzer": "^8.0.1",
-    "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.1.1",
-    "@semantic-release/npm": "^7.0.6",
-    "@semantic-release/release-notes-generator": "^9.0.1",
     "@stencil/sass": "^1.3.2",
     "husky": "^4.3.0",
-    "lint-staged": "^10.4.2",
-    "semantic-release": "^17.2.1"
+    "lint-staged": "^10.4.2"
   },
   "husky": {
     "hooks": {

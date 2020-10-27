@@ -5,13 +5,19 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
         node-version: '14.x'
     - run: npm install
     - run: npm run build
-    - run: npm run release
+    - name: release
+      uses: cycjimmy/semantic-release-action@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     - name: push to gh-pages
       if: contains(github.ref, 'main')
       uses: JamesIves/github-pages-deploy-action@releases/v3
