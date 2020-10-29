@@ -1,4 +1,6 @@
-# <x-ray>
+# \<x-ray>
+
+[![version](https://img.shields.io/npm/v/@sneas/x-ray.svg?style=flat-square)](http://npm.im/@sneas/x-ray)
 
 Probably, the easiest way to demo HTML/Web components.
 
