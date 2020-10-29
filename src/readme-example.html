@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>X-Ray. Demo Page.</title>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@sneas/x-ray@latest/dist/component/component.esm.js"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-4 mb-4">
+      <p>
+        <a
+          class="github-button"
+          href="https://github.com/sneas/x-ray"
+          data-size="large"
+          aria-label="Star sneas/x-ray on GitHub"
+          >x-ray</a
+        >
+      </p>
+      <x-ray>
+        <!-- The demo code goes here -->
+        <!-- For example, Bootstrap 4 Alert: -->
+        <div
+          class="alert alert-warning alert-dismissible fade show"
+          role="alert"
+        >
+          <strong>Holy guacamole!</strong> You should check in on some of those
+          fields below.
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </x-ray>
+    </div>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>

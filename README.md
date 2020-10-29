@@ -47,4 +47,4 @@ import '@sneas/x-ray';
 
 Which provides the result below:
 
-![Preview of Bootstrap 4 Alert Component](docs/bootstrap-alert.png)
+![Preview of Bootstrap 4 Alert Component](docs/bootstrap-alert.gif)
