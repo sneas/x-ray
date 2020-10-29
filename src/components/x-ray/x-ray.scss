@@ -1,10 +1,10 @@
 @import '~highlight.js/scss/vs2015';
 
-.component-preview__code-previewer {
+.x-ray__code-previewer {
   margin-bottom: 0.5rem;
 }
 
-.component-preview__toggle {
+.x-ray__toggle {
   cursor: pointer;
 
   &:before {
@@ -22,7 +22,7 @@
     transition: transform 0.2s ease-out;
   }
 
-  &.component-preview__toggle--active {
+  &.x-ray__toggle--active {
     &:before {
       transform: rotate(90deg) translate(-3px, -4px);
     }
@@ -34,17 +34,17 @@
   }
 }
 
-.component-preview__code-container {
+.x-ray__code-container {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
 
-.component-preview__code-container--visible {
+.x-ray__code-container--visible {
   max-height: 1000px;
   transition: max-height 0.15s ease-in;
 }
 
-.component-preview__code {
+.x-ray__code {
   margin-bottom: 0;
 }

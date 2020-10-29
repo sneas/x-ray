@@ -1,4 +1,4 @@
-# component-preview
+# x-ray
 
 <!-- Auto Generated Below -->
 

@@ -6,32 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface ComponentPreview {
+    interface XRay {
     }
 }
 declare global {
-    interface HTMLComponentPreviewElement extends Components.ComponentPreview, HTMLStencilElement {
+    interface HTMLXRayElement extends Components.XRay, HTMLStencilElement {
     }
-    var HTMLComponentPreviewElement: {
-        prototype: HTMLComponentPreviewElement;
-        new (): HTMLComponentPreviewElement;
+    var HTMLXRayElement: {
+        prototype: HTMLXRayElement;
+        new (): HTMLXRayElement;
     };
     interface HTMLElementTagNameMap {
-        "component-preview": HTMLComponentPreviewElement;
+        "x-ray": HTMLXRayElement;
     }
 }
 declare namespace LocalJSX {
-    interface ComponentPreview {
+    interface XRay {
     }
     interface IntrinsicElements {
-        "component-preview": ComponentPreview;
+        "x-ray": XRay;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "component-preview": LocalJSX.ComponentPreview & JSXBase.HTMLAttributes<HTMLComponentPreviewElement>;
+            "x-ray": LocalJSX.XRay & JSXBase.HTMLAttributes<HTMLXRayElement>;
         }
     }
 }

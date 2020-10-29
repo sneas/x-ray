@@ -1,8 +1,8 @@
-# <component-preview>
+# <x-ray>
 
 Probably, the easiest way to demo HTML/Web components.
 
-Demo: [https://sneas.github.io/component-preview](https://sneas.github.io/component-preview)
+Demo: [https://sneas.github.io/x-ray](https://sneas.github.io/x-ray)
 
 ## Installation
 
@@ -11,26 +11,26 @@ Demo: [https://sneas.github.io/component-preview](https://sneas.github.io/compon
 ```html
 <script
   type="module"
-  src="https://unpkg.com/component-preview@latest/dist/component/component.esm.js"
+  src="https://unpkg.com/@sneas/x-ray@latest/dist/component/component.esm.js"
 ></script>
 ```
 
 ### NodeJS
 
 ```sh
-npm install component-preview --save
+npm install @sneas/x-ray --save
 ```
 
 Add import within the root component:
 
 ```js
-import 'component-preview';
+import '@sneas/x-ray';
 ```
 
 ## Usage
 
 ```html
-<component-preview>
+<x-ray>
   <!-- The demo code goes here -->
   <!-- For example, Bootstrap 4 Alert: -->
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -40,7 +40,7 @@ import 'component-preview';
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-</component-preview>
+</x-ray>
 ```
 
 Which provides the result below:

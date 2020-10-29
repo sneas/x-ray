@@ -8,11 +8,11 @@ import { trimFirstLine } from './trimFirstLine';
 hljs.registerLanguage('xml', xml);
 
 @Component({
-  tag: 'component-preview',
-  styleUrl: 'component-preview.scss',
+  tag: 'x-ray',
+  styleUrl: 'x-ray.scss',
   shadow: false,
 })
-export class ComponentPreview {
+export class XRay {
   @Element() el: HTMLElement;
 
   @State() isCodeVisible = false;
@@ -32,16 +32,16 @@ export class ComponentPreview {
   render() {
     return (
       <Host>
-        <div class="component-preview__preview">
+        <div class="x-ray__preview">
           <slot />
         </div>
-        <div class="component-preview__code-previewer">
+        <div class="x-ray__code-previewer">
           <a
             role="button"
             tabindex="0"
             class={{
-              'component-preview__toggle': true,
-              'component-preview__toggle--active': this.isCodeVisible,
+              'x-ray__toggle': true,
+              'x-ray__toggle--active': this.isCodeVisible,
             }}
             onClick={() => (this.isCodeVisible = !this.isCodeVisible)}
           >
@@ -49,14 +49,11 @@ export class ComponentPreview {
           </a>
           <div
             class={{
-              'component-preview__code-container': true,
-              'component-preview__code-container--visible': this.isCodeVisible,
+              'x-ray__code-container': true,
+              'x-ray__code-container--visible': this.isCodeVisible,
             }}
           >
-            <pre
-              class="component-preview__code hljs"
-              innerHTML={this.innerHTML}
-            ></pre>
+            <pre class="x-ray__code hljs" innerHTML={this.innerHTML}></pre>
           </div>
         </div>
       </Host>
