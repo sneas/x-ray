@@ -36,8 +36,8 @@ import '@sneas/x-ray';
   <!-- The demo code goes here -->
   <!-- For example, Bootstrap 4 Alert: -->
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>Holy guacamole!</strong> You should check in on some of those fields
-    below.
+    <strong>Holy guacamole!</strong> You should check out the code of this alert
+    component below.
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
