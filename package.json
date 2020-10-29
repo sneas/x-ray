@@ -45,5 +45,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,html,css,scss,json}": "prettier --write"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
