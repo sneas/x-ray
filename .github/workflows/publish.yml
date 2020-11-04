@@ -10,6 +10,7 @@ jobs:
       with:
         node-version: '14.x'
     - run: npm install
+    - run: npm run test
     - run: npm run build
     - name: release
       uses: cycjimmy/semantic-release-action@v2

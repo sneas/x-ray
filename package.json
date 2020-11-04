@@ -21,6 +21,7 @@
     "loader/"
   ],
   "scripts": {
+    "prebuild": "rimraf dist loader www",
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
@@ -41,7 +42,8 @@
     "jest-cli": "^26.6.0",
     "lint-staged": "^10.4.2",
     "prettier": "^2.1.2",
-    "puppeteer": "^5.3.1"
+    "puppeteer": "^5.3.1",
+    "rimraf": "^3.0.2"
   },
   "husky": {
     "hooks": {
