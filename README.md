@@ -13,7 +13,7 @@ Demo: [https://sneas.github.io/x-ray](https://sneas.github.io/x-ray)
 ```html
 <script
   type="module"
-  src="https://unpkg.com/@sneas/x-ray@latest/dist/component/component.esm.js"
+  src="https://unpkg.com/@sneas/x-ray@2/dist/component/component.esm.js"
 ></script>
 ```
 
