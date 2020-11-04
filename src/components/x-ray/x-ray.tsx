@@ -1,10 +1,9 @@
 import { Component, h, Element, State, Host } from '@stencil/core';
-import prettier from 'prettier/standalone';
-import parserHtml from 'prettier/parser-html';
-import parserPostCss from 'prettier/parser-postcss';
 import hljs from 'highlight.js/lib/core';
 import xml from 'highlight.js/lib/languages/xml';
 import { trimFirstLine } from './trimFirstLine';
+import { trimIndent } from './trimIndent';
+import { detectIndent } from './detectIndent';
 hljs.registerLanguage('xml', xml);
 
 @Component({
@@ -20,12 +19,12 @@ export class XRay {
   private innerHTML: string;
 
   componentWillLoad() {
+    const code = trimFirstLine(
+      this.el.querySelector('code:first-child').innerHTML
+    );
     this.innerHTML = hljs.highlight(
       'xml',
-      prettier.format(trimFirstLine(this.el.innerHTML), {
-        parser: 'html',
-        plugins: [parserHtml, parserPostCss],
-      })
+      trimIndent(code, detectIndent(code)).trim()
     ).value;
   }
 
