@@ -20,11 +20,12 @@ jobs:
         semantic_version: 17
         extra_plugins: |
           @semantic-release/git
+    - run: npm run demo
     - name: push to gh-pages
       if: contains(github.ref, 'main')
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: www
+        FOLDER: demo
 
