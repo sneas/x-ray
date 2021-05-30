@@ -15,7 +15,15 @@ const commonConfig = {
       {
         test: /\.html$/,
         use: ['html-loader']
-      }
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
+      },
     ],
   },
   resolve: {
@@ -29,7 +37,7 @@ const commonConfig = {
 };
 
 const demoConfig = {
-  plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
+  plugins: [new HtmlWebpackPlugin({ template: './public/index.html', filename:'index.html', inject: true, })],
   output: {
     path: path.resolve(__dirname, 'demo'),
   },
