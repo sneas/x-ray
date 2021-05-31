@@ -3,8 +3,9 @@ import hljs from 'highlight.js/lib/core';
 import xml from 'highlight.js/lib/languages/xml';
 import { trimIndent } from './trimIndent';
 import { detectIndent } from './detectIndent';
-hljs.registerLanguage('xml', xml);
 import styles from './index.scss';
+
+hljs.registerLanguage('xml', xml);
 
 const template = document.createElement('template');
 
@@ -38,8 +39,10 @@ class XRay extends HTMLElement {
 
     const codeElement = this.querySelector('.x-ray__code');
     codeElement.innerHTML = hljs.highlight(
-      'xml',
-      trimIndent(this.code, detectIndent(this.code)).trim()
+      trimIndent(this.code, detectIndent(this.code)).trim(),
+      {
+        language: 'xml',
+      }
     ).value;
 
     const codeToggleButtonElement = this.querySelector('.x-ray__toggle');
