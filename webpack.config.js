@@ -13,16 +13,16 @@ const commonConfig = {
         exclude: /node_modules/,
       },
       {
-        test: /\.html$/,
-        use: ['html-loader']
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.s[ac]ss$/i,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
-        ],
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          esModule: false,
+        },
       },
     ],
   },
@@ -37,7 +37,13 @@ const commonConfig = {
 };
 
 const demoConfig = {
-  plugins: [new HtmlWebpackPlugin({ template: './public/index.html', filename:'index.html', inject: true, })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      filename: 'index.html',
+      inject: true,
+    }),
+  ],
   output: {
     path: path.resolve(__dirname, 'demo'),
   },
