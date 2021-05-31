@@ -11,7 +11,7 @@ Demo: [https://sneas.github.io/x-ray](https://sneas.github.io/x-ray)
 ### HTML
 
 ```html
-<script src="https://unpkg.com/@sneas/x-ray@3/dist/index.js"></script>
+<script defer src="https://unpkg.com/@sneas/x-ray@3/dist/index.js"></script>
 ```
 
 ### NodeJS
