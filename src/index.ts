@@ -1,8 +1,8 @@
-import {trimFirstLine} from "./trimFirstLine";
-import hljs from "highlight.js/lib/core";
+import { trimFirstLine } from './trimFirstLine';
+import hljs from 'highlight.js/lib/core';
 import xml from 'highlight.js/lib/languages/xml';
-import {trimIndent} from "./trimIndent";
-import {detectIndent} from "./detectIndent";
+import { trimIndent } from './trimIndent';
+import { detectIndent } from './detectIndent';
 hljs.registerLanguage('xml', xml);
 import styles from './index.scss';
 
@@ -33,12 +33,10 @@ class XRay extends HTMLElement {
 
   constructor() {
     super();
-    this.code = trimFirstLine(
-      this.querySelector('code:first-child').innerHTML
-    );
+    this.code = trimFirstLine(this.querySelector('code:first-child').innerHTML);
     this.appendChild(template.content.cloneNode(true));
 
-    const codeElement = this.querySelector('.x-ray__code')
+    const codeElement = this.querySelector('.x-ray__code');
     codeElement.innerHTML = hljs.highlight(
       'xml',
       trimIndent(this.code, detectIndent(this.code)).trim()
@@ -47,8 +45,13 @@ class XRay extends HTMLElement {
     const codeToggleButtonElement = this.querySelector('.x-ray__toggle');
     const codeContainerElement = this.querySelector('.x-ray__code-container');
     codeToggleButtonElement.addEventListener('click', () => {
-      const codeIsVisible = codeToggleButtonElement.classList.toggle('x-ray__toggle--active');
-      codeContainerElement.classList.toggle('x-ray__code-container--visible', codeIsVisible);
+      const codeIsVisible = codeToggleButtonElement.classList.toggle(
+        'x-ray__toggle--active'
+      );
+      codeContainerElement.classList.toggle(
+        'x-ray__code-container--visible',
+        codeIsVisible
+      );
     });
   }
 }
