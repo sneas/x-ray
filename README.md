@@ -11,10 +11,7 @@ Demo: [https://sneas.github.io/x-ray](https://sneas.github.io/x-ray)
 ### HTML
 
 ```html
-<script
-  type="module"
-  src="https://unpkg.com/@sneas/x-ray@2/dist/component/component.esm.js"
-></script>
+<script src="https://unpkg.com/@sneas/x-ray@3/dist/index.js"></script>
 ```
 
 ### NodeJS
@@ -54,6 +51,6 @@ import '@sneas/x-ray';
 
 ⚠️ Make sure the code has been wrapped with `<code>` tag.
 
-Which provides the result below:
+The result of the code from above:
 
 ![Preview of Bootstrap 4 Alert Component](docs/bootstrap-alert.gif)
