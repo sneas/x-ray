@@ -47,7 +47,8 @@ class XRay extends HTMLElement {
 
     const codeToggleButtonElement = this.querySelector('.x-ray__toggle');
     const codeContainerElement = this.querySelector('.x-ray__code-container');
-    codeToggleButtonElement.addEventListener('click', () => {
+
+    const toggle = () => {
       const codeIsVisible = codeToggleButtonElement.classList.toggle(
         'x-ray__toggle--active'
       );
@@ -55,6 +56,16 @@ class XRay extends HTMLElement {
         'x-ray__code-container--visible',
         codeIsVisible
       );
+    };
+
+    codeToggleButtonElement.addEventListener('click', toggle);
+
+    const TOGGLE_KEYS = ['Space', 'Enter'];
+    codeToggleButtonElement.addEventListener('keypress', (e: KeyboardEvent) => {
+      if (TOGGLE_KEYS.includes(e.code)) {
+        e.preventDefault();
+        toggle();
+      }
     });
   }
 }
