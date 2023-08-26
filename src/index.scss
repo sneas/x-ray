@@ -13,14 +13,14 @@
 
     vertical-align: middle;
     margin-right: 0.7rem;
-    transform: translateY(-2px);
+    transform: translate(5px, -1px);
 
     transition: transform 0.2s ease-out;
   }
 
   &.x-ray__toggle--active {
     &:before {
-      transform: rotate(90deg) translate(-3px, -4px);
+      transform: rotate(90deg) translate(-1px, -4px);
     }
   }
 }
